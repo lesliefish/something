@@ -139,7 +139,7 @@ int main(int argc, char* argv[])
             auto start = std::chrono::system_clock::now();
             cout << "mutil thread start" << endl;
 
-            // 每个任务在独立的线程中执行
+            // 每个任务管理对象在独立的线程中执行
             while (!packagedTasks.empty())
             {
                 std::packaged_task<std::map<int, int>()> myTask = std::move(packagedTasks.front());
